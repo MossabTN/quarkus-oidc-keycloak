@@ -53,7 +53,7 @@ To start a Keycloak Server you can use Docker and just run the following command
 docker-compose -f src/main/docker/docker-compose.yaml up -d
 ```
 
-You should be able to access your Keycloak Server at http://localhost:8180/auth[localhost:9080/auth].
+You should be able to access your Keycloak Server at http://localhost:9080/auth .
 ![test](login.png)
 Log in as the `admin` user to access the Keycloak Administration Console.
 Username should be `admin` and password `admin`.
@@ -76,6 +76,8 @@ cd src/main/webapp/
 npm install
 npm start
 ```
+You should be able to access your angular app at http://localhost:4200.
+
 ![test](users.png)
 
 This command will leave Angular app running in the foreground listening on port 4200.
