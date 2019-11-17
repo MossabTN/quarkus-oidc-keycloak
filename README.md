@@ -7,6 +7,7 @@ In this example, we build a very simple microservice which offers angular UI two
 
 These endpoints are protected and can only be accessed if a client is sending a bearer token along with the request, which must be valid (e.g.: signature, expiration and audience) and trusted by the microservice.
 
+
 The bearer token is issued by a Keycloak Server and represents the subject to which the token was issued for.
 For being an OAuth 2.0 Authorization Server, the token also references the client acting on behalf of the user.
 
@@ -37,6 +38,7 @@ been set, and that a JDK 1.8+ `java` command is on the path.
 See the [Building a Native Executable guide](https://quarkus.io/guides/building-native-image)
 for help setting up your environment.
 
+
 ## Building the application
 
 Launch the Maven build on the checked out sources of this demo:
@@ -52,7 +54,7 @@ docker-compose -f src/main/docker/docker-compose.yaml up -d
 ```
 
 You should be able to access your Keycloak Server at http://localhost:8180/auth[localhost:9080/auth].
-
+![test](login.png)
 Log in as the `admin` user to access the Keycloak Administration Console.
 Username should be `admin` and password `admin`.
 
@@ -74,6 +76,7 @@ cd src/main/webapp/
 npm install
 npm start
 ```
+![test](users.png)
 
 This command will leave Angular app running in the foreground listening on port 4200.
 
