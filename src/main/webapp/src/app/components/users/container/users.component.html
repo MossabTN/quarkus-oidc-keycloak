@@ -1,0 +1,19 @@
+<div class="content-area">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Users</h2>
+    </div>
+  </div>
+  <div class="row">
+    <clr-datagrid class="col-xs">
+      <clr-dg-column>UserName</clr-dg-column>
+
+      <clr-dg-row *clrDgItems="let user of users$ | async">
+
+        <clr-dg-cell>
+          {{ user?.userName }}
+        </clr-dg-cell>
+      </clr-dg-row>
+    </clr-datagrid>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  keycloak:
+    image: jboss/keycloak:7.0.0
+    ports:
+      - '9080:8080'
+    volumes:
+      - ./realm:/opt/jboss/keycloak/realm-config
+    environment:
+      DB_VENDOR: h2
+      KEYCLOAK_IMPORT: /opt/jboss/keycloak/realm-config/realm.json
+#      DB_VENDOR: POSTGRES
+#      DB_ADDR: keycloak-db
+#      DB_PORT: 5432
+#      DB_DATABASE: keycloak
+#      DB_USER: keycloak
+#      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
